@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"> -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Load the toolbar here -->
+        <include
+            layout="@layout/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/main_signout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="SignOut"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/main_stats"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_stats"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/main_today_log"
+            android:layout_width="136dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="96dp"
+            android:text="Today Log"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/main_overview"
+            android:layout_width="136dp"
+            android:layout_height="118dp"
+            android:layout_marginTop="96dp"
+            android:text="Overview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.764"
+            app:layout_constraintStart_toEndOf="@+id/main_today_log"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/main_user_config"
+            android:layout_width="136dp"
+            android:layout_height="118dp"
+            android:layout_marginTop="80dp"
+            android:text="User Config"
+            app:layout_constraintEnd_toEndOf="@+id/main_overview"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/main_overview"
+            app:layout_constraintTop_toBottomOf="@+id/main_overview" />
+
+        <Button
+            android:id="@+id/main_stats"
+            android:layout_width="136dp"
+            android:layout_height="118dp"
+            android:layout_marginTop="80dp"
+            android:text="Stats"
+            app:layout_constraintEnd_toEndOf="@+id/main_user_config"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/main_user_config"
+            app:layout_constraintTop_toBottomOf="@+id/main_user_config" />
+
+        <Button
+            android:id="@+id/main_multiple_days"
+            android:layout_width="136dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="80dp"
+            android:text="Insert multiple days logs"
+            app:layout_constraintEnd_toEndOf="@+id/main_today_log"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_today_log" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="136dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="80dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="@+id/main_multiple_days"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_multiple_days" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".log.MultipleLogActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- Load the toolbar here -->
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="354dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:text="Multiple Logs"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+        <Button
+            android:id="@+id/multiple_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:text="Save"
+            app:layout_constraintEnd_toEndOf="@+id/multiple_numbers_of_days"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/multiple_numbers_of_days"
+            app:layout_constraintTop_toBottomOf="@+id/multiple_numbers_of_days" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="94dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center|left"
+            android:text="Start:"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="94dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="48dp"
+            android:gravity="center|left"
+            android:text="Last:"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/multiple_start_day_month"
+            android:layout_width="247dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center|left"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/multiple_last_day_month"
+            android:layout_width="247dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="48dp"
+            android:gravity="center|left"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="@+id/multiple_start_day_month"
+            app:layout_constraintTop_toBottomOf="@+id/multiple_start_day_month" />
+
+        <Button
+            android:id="@+id/multiple_set_log"
+            android:layout_width="146dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="35dp"
+            android:text="Setup Logs"
+            app:layout_constraintEnd_toEndOf="@+id/multiple_last_day_month"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/multiple_last_day_month" />
+
+        <TextView
+            android:id="@+id/multiple_numbers_of_days"
+            android:layout_width="352dp"
+            android:layout_height="78dp"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:text="Number of days: 0"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/multiple_set_log"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/multiple_set_log"
+            app:layout_constraintTop_toBottomOf="@+id/multiple_set_log" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

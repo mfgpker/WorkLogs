@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".stats.MonthStatsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include3"
+            layout="@layout/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="125dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center|left"
+            android:text="Year:"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include3" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="125dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center|left"
+            android:text="Month:"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <Spinner
+            android:id="@+id/Stats_spinner_year"
+            android:layout_width="178dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+        <Spinner
+            android:id="@+id/stats_spinner_month"
+            android:layout_width="178dp"
+            android:layout_height="63dp"
+            app:layout_constraintStart_toStartOf="@+id/Stats_spinner_year"
+            app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="94dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center|left"
+            android:text="Start:"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="0dp"
+            android:layout_height="514dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.363"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stats_spinner_month">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView63"
+                    android:layout_width="171dp"
+                    android:layout_height="61dp"
+                    android:gravity="center"
+                    android:paddingStart="20px"
+                    android:text="Work:" />
+
+                <TextView
+                    android:id="@+id/workDaysStats"
+                    android:layout_width="236dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="171dp"
+                    android:layout_height="61dp"
+                    android:gravity="center"
+                    android:paddingStart="20px"
+                    android:text="Normal:" />
+
+                <TextView
+                    android:id="@+id/normalStats"
+                    android:layout_width="236dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="171dp"
+                    android:layout_height="61dp"
+                    android:gravity="center"
+                    android:paddingStart="20px"
+                    android:text="Holiday:" />
+
+                <TextView
+                    android:id="@+id/holidatStats"
+                    android:layout_width="236dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="171dp"
+                    android:layout_height="61dp"
+                    android:gravity="center"
+                    android:paddingStart="20px"
+                    android:text="Sick:" />
+
+                <TextView
+                    android:id="@+id/sickStats"
+                    android:layout_width="236dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView194"
+                    android:layout_width="171dp"
+                    android:layout_height="61dp"
+                    android:gravity="center"
+                    android:paddingStart="20px"
+                    android:text="Home:" />
+
+                <TextView
+                    android:id="@+id/homeStats"
+                    android:layout_width="236dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView193"
+                    android:layout_width="171dp"
+                    android:layout_height="61dp"
+                    android:gravity="center"
+                    android:paddingStart="20px"
+                    android:text="Away:" />
+
+                <TextView
+                    android:id="@+id/awayStats"
+                    android:layout_width="236dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView149"
+                    android:layout_width="171dp"
+                    android:layout_height="61dp"
+                    android:gravity="center"
+                    android:paddingStart="20px"
+                    android:text="Free:" />
+
+                <TextView
+                    android:id="@+id/freeStats"
+                    android:layout_width="236dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="171dp"
+                    android:layout_height="61dp"
+                    android:gravity="center"
+                    android:paddingStart="20px"
+                    android:text="Unemployed:" />
+
+                <TextView
+                    android:id="@+id/unemployedStats"
+                    android:layout_width="236dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="0" />
+
+            </TableRow>
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
