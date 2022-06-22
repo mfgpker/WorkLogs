@@ -65,6 +65,10 @@ public class FirebaseUtils {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UserConfig config = snapshot.getValue(UserConfig.class);
 
+                if(config == null) {
+                    config = new UserConfig();
+                }
+
                 myCallback.onCallback(config);
             }
 
@@ -76,6 +80,7 @@ public class FirebaseUtils {
     }
 
     public void setCurrentUserConfig(UserConfig config) {
+
         DatabaseReference ref = this.getCurrentUserReference().child("config");
 
         ref.setValue(config);
